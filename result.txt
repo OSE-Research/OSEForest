@@ -1,0 +1,652 @@
+训练集：194106 白，604299 黑， 共798405
+
+black:
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 12 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   entropy                            798405 non-null  float64
+ 9   label_count                        798405 non-null  int64
+ 10  max_label_length                   798405 non-null  float64
+ 11  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(5)
+memory usage: 73.1 MB
+None
+       sourceTransportPort  ...  avg_label_length
+count          4685.000000  ...       4685.000000
+mean          48181.021131  ...         15.329345
+std           11162.395916  ...         12.669462
+min              53.000000  ...          2.666667
+25%           44313.000000  ...          7.333333
+50%           50214.000000  ...         11.000000
+75%           56071.000000  ...         17.400000
+max           65468.000000  ...        135.571429
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4685 entries, 0 to 4684
+Data columns (total 12 columns):
+ #   Column                             Non-Null Count  Dtype
+---  ------                             --------------  -----
+ 0   sourceTransportPort                4685 non-null   int64
+ 1   destinationTransportPort           4685 non-null   int64
+ 2   flowStartSeconds                   4685 non-null   int64
+ 3   flowEndSecond                      4685 non-null   int64
+ 4   Total count of characters in FQDN  4685 non-null   int64
+ 5   subdomain_len                      4685 non-null   int64
+ 6   upper_count                        4685 non-null   int64
+ 7   number_count                       4685 non-null   int64
+ 8   entropy                            4685 non-null   float64
+ 9   label_count                        4685 non-null   int64
+ 10  max_label_length                   4685 non-null   float64
+ 11  avg_label_length                   4685 non-null   float64
+dtypes: float64(3), int64(9)
+memory usage: 439.3 KB
+None
+Train Accuracy: 0.999970
+Test Accuracy: 0.999573
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       0.00      0.00      0.00         0
+          1       1.00      1.00      1.00      4685
+
+avg / total       1.00      1.00      1.00      4685
+
+
+Process finished with exit code 0
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+cdn:
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 12 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   entropy                            798405 non-null  float64
+ 9   label_count                        798405 non-null  int64
+ 10  max_label_length                   798405 non-null  float64
+ 11  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(5)
+memory usage: 73.1 MB
+None
+X[0] [4.72970000e+04 5.30000000e+01 1.50770665e+09 1.50770666e+09
+ 2.80000000e+01 2.00000000e+00 0.00000000e+00 1.40000000e+01
+ 3.46864266e+00 6.00000000e+00 8.00000000e+00 3.83333333e+00]
+Extract files: 100%|███████████████████| 2228/2228 [1:04:36<00:00,  1.74s/files]
+       sourceTransportPort  ...  avg_label_length
+count        972012.000000  ...     972012.000000
+mean          35407.359009  ...          5.258791
+std           18478.625521  ...          1.491821
+min               9.000000  ...          1.000000
+25%           19601.000000  ...          4.400000
+50%           37128.000000  ...          4.750000
+75%           51477.000000  ...          5.250000
+max           65535.000000  ...         14.000000
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 972012 entries, 0 to 972011
+Data columns (total 12 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                972012 non-null  int64
+ 1   destinationTransportPort           972012 non-null  int64
+ 2   flowStartSeconds                   972005 non-null  float64
+ 3   flowEndSecond                      972005 non-null  float64
+ 4   Total count of characters in FQDN  972012 non-null  int64
+ 5   subdomain_len                      972012 non-null  int64
+ 6   upper_count                        972012 non-null  int64
+ 7   number_count                       972012 non-null  int64
+ 8   entropy                            972012 non-null  float64
+ 9   label_count                        972012 non-null  int64
+ 10  max_label_length                   972012 non-null  float64
+ 11  avg_label_length                   972012 non-null  float64
+dtypes: float64(5), int64(7)
+memory usage: 89.0 MB
+None
+Train Accuracy: 0.999986
+Test Accuracy: 0.839752
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.84      0.91    972012
+          1       0.00      0.00      0.00         0
+
+avg / total       1.00      0.84      0.91    972012
+
+
+Process finished with exit code 0
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+msad
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 12 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   entropy                            798405 non-null  float64
+ 9   label_count                        798405 non-null  int64
+ 10  max_label_length                   798405 non-null  float64
+ 11  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(5)
+memory usage: 73.1 MB
+None
+Extract files: 100%|███████████████████| 3756/3756 [7:23:38<00:00,  7.09s/files]
+       sourceTransportPort  ...  avg_label_length
+count         4.913937e+06  ...      4.913937e+06
+mean          4.139293e+04  ...      4.458581e+00
+std           1.716387e+04  ...      1.739291e+00
+min           4.000000e+00  ...      2.000000e+00
+25%           3.134000e+04  ...      3.250000e+00
+50%           4.584800e+04  ...      3.750000e+00
+75%           5.495100e+04  ...      4.666667e+00
+max           6.553500e+04  ...      4.750000e+01
+
+[8 rows x 12 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4913937 entries, 0 to 4913936
+Data columns (total 12 columns):
+ #   Column                             Dtype
+---  ------                             -----
+ 0   sourceTransportPort                int64
+ 1   destinationTransportPort           int64
+ 2   flowStartSeconds                   int64
+ 3   flowEndSecond                      int64
+ 4   Total count of characters in FQDN  int64
+ 5   subdomain_len                      int64
+ 6   upper_count                        int64
+ 7   number_count                       int64
+ 8   entropy                            float64
+ 9   label_count                        int64
+ 10  max_label_length                   float64
+ 11  avg_label_length                   float64
+dtypes: float64(3), int64(9)
+memory usage: 449.9 MB
+None
+Train Accuracy: 0.999975
+Test Accuracy: 0.945586
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.95      0.97   4913937
+          1       0.00      0.00      0.00         0
+
+avg / total       1.00      0.95      0.97   4913937
+
+
+Process finished with exit code 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cdn  0.8
+
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/config.py:131: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/dataframe/utils.py:13: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+/home/dell/anaconda3/lib/python3.7/site-packages/distributed/config.py:20: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  defaults = yaml.load(f)
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 13 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   begin_with_num                     798405 non-null  int64
+ 9   entropy                            798405 non-null  float64
+ 10  label_count                        798405 non-null  int64
+ 11  max_label_length                   798405 non-null  float64
+ 12  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(6)
+memory usage: 79.2 MB
+None
+Extract files: 100%|███████████████████| 2228/2228 [1:04:34<00:00,  1.74s/files]
+       sourceTransportPort  ...  avg_label_length
+count        972012.000000  ...     972012.000000
+mean          35407.359009  ...          5.258791
+std           18478.625521  ...          1.491821
+min               9.000000  ...          1.000000
+25%           19601.000000  ...          4.400000
+50%           37128.000000  ...          4.750000
+75%           51477.000000  ...          5.250000
+max           65535.000000  ...         14.000000
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 972012 entries, 0 to 972011
+Data columns (total 13 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                972012 non-null  int64
+ 1   destinationTransportPort           972012 non-null  int64
+ 2   flowStartSeconds                   972005 non-null  float64
+ 3   flowEndSecond                      972005 non-null  float64
+ 4   Total count of characters in FQDN  972012 non-null  int64
+ 5   subdomain_len                      972012 non-null  int64
+ 6   upper_count                        972012 non-null  int64
+ 7   number_count                       972012 non-null  int64
+ 8   begin_with_num                     972012 non-null  int64
+ 9   entropy                            972012 non-null  float64
+ 10  label_count                        972012 non-null  int64
+ 11  max_label_length                   972012 non-null  float64
+ 12  avg_label_length                   972012 non-null  float64
+dtypes: float64(5), int64(8)
+memory usage: 96.4 MB
+None
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Train Accuracy: 1.000000
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+Test Acc: 0.8262017341349696
+预测正常条数： 803078  预测异常条数： 106549  预测未知条数： 62385
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Test Accuracy: 0.860040
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.86      0.92    972012
+          1       0.00      0.00      0.00         0
+
+avg / total       1.00      0.86      0.92    972012
+
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.83      0.90    972012
+          1       0.00      0.00      0.00         0
+          2       0.00      0.00      0.00         0
+
+avg / total       1.00      0.83      0.90    972012
+
+
+Process finished with exit code 0
+
+
+
+cdn 0.9
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/config.py:131: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/dataframe/utils.py:13: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+/home/dell/anaconda3/lib/python3.7/site-packages/distributed/config.py:20: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  defaults = yaml.load(f)
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 13 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   begin_with_num                     798405 non-null  int64
+ 9   entropy                            798405 non-null  float64
+ 10  label_count                        798405 non-null  int64
+ 11  max_label_length                   798405 non-null  float64
+ 12  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(6)
+memory usage: 79.2 MB
+None
+       sourceTransportPort  ...  avg_label_length
+count        972012.000000  ...     972012.000000
+mean          35407.359009  ...          5.258791
+std           18478.625521  ...          1.491821
+min               9.000000  ...          1.000000
+25%           19601.000000  ...          4.400000
+50%           37128.000000  ...          4.750000
+75%           51477.000000  ...          5.250000
+max           65535.000000  ...         14.000000
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 972012 entries, 0 to 972011
+Data columns (total 13 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                972012 non-null  int64
+ 1   destinationTransportPort           972012 non-null  int64
+ 2   flowStartSeconds                   972005 non-null  float64
+ 3   flowEndSecond                      972005 non-null  float64
+ 4   Total count of characters in FQDN  972012 non-null  int64
+ 5   subdomain_len                      972012 non-null  int64
+ 6   upper_count                        972012 non-null  int64
+ 7   number_count                       972012 non-null  int64
+ 8   begin_with_num                     972012 non-null  int64
+ 9   entropy                            972012 non-null  float64
+ 10  label_count                        972012 non-null  int64
+ 11  max_label_length                   972012 non-null  float64
+ 12  avg_label_length                   972012 non-null  float64
+dtypes: float64(5), int64(8)
+memory usage: 96.4 MB
+None
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Train Accuracy: 1.000000
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+Test Acc: 0.8205073599914404
+预测正常条数： 797543 占比82%
+预测异常条数： 81710 占比8.5%
+预测未知条数： 92759 占比9.5%
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Test Accuracy: 0.860040
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.86      0.92    972012
+          1       0.00      0.00      0.00         0
+
+avg / total       1.00      0.86      0.92    972012
+
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.82      0.90    972012
+          1       0.00      0.00      0.00         0
+          2       0.00      0.00      0.00         0
+
+avg / total       1.00      0.82      0.90    972012
+
+
+Process finished with exit code 0
+
+
+
+
+msad 0.9
+ssh://dell@10.170.45.175:22/home/dell/anaconda3/bin/python -u /home/dell/DNS/train.py
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/config.py:131: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(f.read()) or {}
+/home/dell/anaconda3/lib/python3.7/site-packages/dask/dataframe/utils.py:13: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+/home/dell/anaconda3/lib/python3.7/site-packages/distributed/config.py:20: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  defaults = yaml.load(f)
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+       sourceTransportPort  ...  avg_label_length
+count         7.983990e+05  ...     798405.000000
+mean          4.121527e+04  ...         15.074255
+std           1.687564e+06  ...         12.486234
+min           1.000000e+00  ...          1.000000
+25%           3.213300e+04  ...          6.250000
+50%           3.933700e+04  ...         11.000000
+75%           5.267100e+04  ...         20.750000
+max           1.507860e+09  ...        136.428571
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 798405 entries, 0 to 798404
+Data columns (total 13 columns):
+ #   Column                             Non-Null Count   Dtype
+---  ------                             --------------   -----
+ 0   sourceTransportPort                798399 non-null  float64
+ 1   destinationTransportPort           798399 non-null  float64
+ 2   flowStartSeconds                   798390 non-null  float64
+ 3   flowEndSecond                      798374 non-null  float64
+ 4   Total count of characters in FQDN  798405 non-null  int64
+ 5   subdomain_len                      798405 non-null  int64
+ 6   upper_count                        798405 non-null  int64
+ 7   number_count                       798405 non-null  int64
+ 8   begin_with_num                     798405 non-null  int64
+ 9   entropy                            798405 non-null  float64
+ 10  label_count                        798405 non-null  int64
+ 11  max_label_length                   798405 non-null  float64
+ 12  avg_label_length                   798405 non-null  float64
+dtypes: float64(7), int64(6)
+memory usage: 79.2 MB
+None
+       sourceTransportPort  ...  avg_label_length
+count         4.913937e+06  ...      4.913937e+06
+mean          4.139293e+04  ...      4.458581e+00
+std           1.716387e+04  ...      1.739291e+00
+min           4.000000e+00  ...      2.000000e+00
+25%           3.134000e+04  ...      3.250000e+00
+50%           4.584800e+04  ...      3.750000e+00
+75%           5.495100e+04  ...      4.666667e+00
+max           6.553500e+04  ...      4.750000e+01
+
+[8 rows x 13 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4913937 entries, 0 to 4913936
+Data columns (total 13 columns):
+ #   Column                             Dtype
+---  ------                             -----
+ 0   sourceTransportPort                int64
+ 1   destinationTransportPort           int64
+ 2   flowStartSeconds                   int64
+ 3   flowEndSecond                      int64
+ 4   Total count of characters in FQDN  int64
+ 5   subdomain_len                      int64
+ 6   upper_count                        int64
+ 7   number_count                       int64
+ 8   begin_with_num                     int64
+ 9   entropy                            float64
+ 10  label_count                        int64
+ 11  max_label_length                   float64
+ 12  avg_label_length                   float64
+dtypes: float64(3), int64(10)
+memory usage: 487.4 MB
+None
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Train Accuracy: 1.000000
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/numpy_pickle.py:93: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+Test Acc: 0.8733665083618288
+预测正常条数： 4291668 占比87.3%
+预测异常条数： 541465 占比11%
+预测未知条数： 80804 占比1.7%
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+Test Accuracy: 0.882159
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.88      0.94   4913937
+          1       0.00      0.00      0.00         0
+
+avg / total       1.00      0.88      0.94   4913937
+
+/home/dell/anaconda3/lib/python3.7/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  'recall', 'true', average, warn_for)
+             precision    recall  f1-score   support
+
+          0       1.00      0.87      0.93   4913937
+          1       0.00      0.00      0.00         0
+          2       0.00      0.00      0.00         0
+
+avg / total       1.00      0.87      0.93   4913937
+
+
+Process finished with exit code 0
+
+
+new xbg
+ssh://dell@222.25.177.108:22/home/dell/anaconda3/envs/tf-gpu/bin/python3.7 -u /home/dell/DNS/bert_dns/xgb_new.py
+Train Accuracy: 0.999887
+0    0
+1    0
+2    0
+3    0
+4    0
+Name: label, dtype: int64
+          0         1         2  ...       765       766       767
+0  0.262711  0.006990  0.226745  ... -0.229600  0.238460  0.308896
+1  0.362109  0.201713  0.181272  ... -0.234934  0.318312  0.187323
+2  0.551829  0.086681  0.225280  ... -0.411041  0.205472  0.235589
+3  0.506071  0.455724  0.343802  ... -0.458600  0.470214 -0.203721
+4  0.212761 -0.050344  0.160022  ... -0.308089  0.445258  0.460639
+
+[5 rows x 768 columns]
+[0 0 0 ... 0 0 3]
+Test Accuracy: 0.983175
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97     15000
+           1       0.98      1.00      0.99     15000
+           2       1.00      1.00      1.00     13221
+           3       1.00      0.95      0.98     24833
+
+    accuracy                           0.98     68054
+   macro avg       0.98      0.99      0.98     68054
+weighted avg       0.98      0.98      0.98     68054
+
+
+Process finished with exit code 0
